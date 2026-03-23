@@ -1,3 +1,5 @@
-blank_issues_enabled: false # 禁止空白 Issue
+blank_issues_enabled: false  # 禁止建立空白 issue
 contact_links:
- - name:
+  - name: 💬 討論區
+    url: https://github.com/your-repo/discussions
+    about: 一般問題請到討論區發問
