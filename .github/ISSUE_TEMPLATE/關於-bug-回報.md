@@ -1,0 +1,115 @@
+---
+name: 關於 Bug 回報
+about: 任何 Bug 回報
+title: "[BUG]"
+labels: ''
+assignees: ''
+
+---
+
+name: 🐛 Bug 回報
+description: 回報程式錯誤或異常行為
+title: "[Bug]: "
+labels: ["bug", "status: triage"]
+assignees:
+  - octocat
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 感謝您回報問題！
+        請盡可能詳細填寫以下資訊，這將幫助我們更快解決問題。
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: 提交前確認
+      description: 請確認以下事項
+      options:
+        - label: 我已搜尋過現有的 Issues，確認這不是重複的問題
+          required: true
+        - label: 我已更新到最新版本，問題仍然存在
+          required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: 應用程式版本
+      description: 您使用的版本是？
+      placeholder: "v1.2.3"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: browser
+    attributes:
+      label: 瀏覽器
+      description: 您使用的瀏覽器是？
+      options:
+        - Chrome
+        - Firefox
+        - Safari
+        - Edge
+        - 其他
+    validations:
+      required: true
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: 作業系統
+      description: 您使用的作業系統是？
+      options:
+        - Windows 11
+        - Windows 10
+        - macOS Sonoma
+        - macOS Ventura
+        - Ubuntu
+        - 其他 Linux
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: 問題描述
+      description: 請詳細描述遇到的問題
+      placeholder: 描述您遇到的問題...
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: 重現步驟
+      description: 請列出重現問題的步驟
+      placeholder: |
+        1. 前往 '...'
+        2. 點擊 '...'
+        3. 看到錯誤
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: 預期行為
+      description: 描述預期應該發生的正確行為
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: 實際行為
+      description: 描述目前實際發生的錯誤行為
+    validations:
+      required: true
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: 截圖
+      description: 如果有的話，請拖拉上傳截圖
+      placeholder: 拖拉圖片到此處上傳...
