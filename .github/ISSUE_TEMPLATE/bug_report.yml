@@ -1,12 +1,3 @@
----
-name: 關於 Bug 回報
-about: 任何 Bug 回報
-title: "[BUG]"
-labels: ''
-assignees: ''
-
----
-
 name: 🐛 Bug 回報
 description: 回報程式錯誤或異常行為
 title: "[Bug]: "
@@ -113,3 +104,29 @@ body:
       label: 截圖
       description: 如果有的話，請拖拉上傳截圖
       placeholder: 拖拉圖片到此處上傳...
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: 錯誤訊息或 Log
+      description: 如果有錯誤訊息或 Console log，請貼上
+      render: shell
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: 嚴重程度
+      description: 這個問題對您的影響程度？
+      options:
+        - 🔴 緊急 - 系統無法使用
+        - 🟠 高 - 主要功能受影響
+        - 🟡 中 - 次要功能受影響
+        - 🟢 低 - 輕微不便
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: 補充資訊
+      description: 任何其他可能有幫助的資訊
