@@ -1,5 +1,5 @@
 name:  Bug 回報
-description: 回報程式錯誤或異常行為(userA)
+description: 回報程式錯誤或異常行為(userB)
 title: "[Bug]: "
 labels: ["bug", "status: triage"]
 assignees:
