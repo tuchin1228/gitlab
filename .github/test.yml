@@ -1,0 +1,33 @@
+name:  測試回報
+description: 測試回報行為
+title: "[Test]: "
+labels: ["question", "status: test"]
+assignees:
+  - octocat
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 感謝您回報問題！
+        請盡可能詳細填寫以下資訊，這將幫助我們更快解決問題。
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: 提交前確認
+      description: 請確認以下事項
+      options:
+        - label: 我已搜尋過現有的 Issues，確認這不是重複的問題
+          required: true
+        - label: 我已更新到最新版本，問題仍然存在
+          required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: 應用程式版本
+      description: 您使用的版本是？
+      placeholder: "v1.2.3"
+    validations:
+      required: true
